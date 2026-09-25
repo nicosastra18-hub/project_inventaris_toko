@@ -21,7 +21,7 @@ Untuk membuka versi file statis, buka `client/index.html`; keenam berkas statisn
 
 Di aplikasi, buka **Pengaturan → Hubungkan Supabase**, lalu masukkan Project URL dan publishable key. Gunakan hanya `sb_publishable_...` (atau anon/public key yang memang untuk frontend). **Jangan pernah memasukkan `sb_secret_...` atau `service_role` key ke browser.**
 
-Aplikasi mendukung login Supabase Auth dan tabel `products`, `categories`, serta `suppliers`. Aktifkan Row Level Security (RLS) dan kebijakan akses yang sesuai di Supabase sebelum memakai data cloud.
+Nama tabel barang default adalah `items`. Kolom yang dipakai: `id`, `user_id`, `code`, `name`, `category`, `price`, `stock`, `unit`, `supplier`, `notes`, dan `updated_at`. Tabel kategori/supplier opsional; kosongkan kolom tabelnya jika datanya akan disimpan lokal. Aktifkan Row Level Security (RLS) dan kebijakan akses yang sesuai pada `items` sebelum memakai data cloud. Jika tabel Anda bertanda **UNRESTRICTED**, tabel tersebut belum aman untuk data privat. Jika insert gagal dengan `new row violates row-level security policy`, jalankan `supabase-items-rls.sql` lewat Supabase → SQL Editor, lalu pastikan aplikasi masuk memakai akun Supabase (bukan mode demo).
 
 ## Berkas statis
 
