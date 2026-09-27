@@ -1,5 +1,5 @@
-const CACHE_NAME = 'zaven-smart-inventory-v1';
-const APP_SHELL = ['/', '/index.html', '/style.css', '/app.js', '/manifest.json', '/icon.png'];
+const CACHE_NAME = 'zaven-smart-inventory-v3';
+const APP_SHELL = ['/', '/index.html', '/style.css', '/app.js', '/manifest.json', '/icon.png', '/icon-192.png'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
