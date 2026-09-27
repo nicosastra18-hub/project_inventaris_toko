@@ -38,3 +38,11 @@
 @media(max-width:600px){.global-search{display:none}.top-install{padding:8px 10px;font-size:9px}.topbar{gap:8px}.top-actions{gap:8px}}
 
 .install-platform-label{margin:0;color:#24436e;font-size:12px;font-weight:700}
+
+/* Group list: explicit, finger-friendly link instead of an unexplained initials avatar. */
+.top-avatar{width:auto;min-width:40px;min-height:38px;height:auto;padding:5px 11px 5px 5px;border:1px solid #dce7f5;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;background:#f7faff;color:#315d99;cursor:pointer;font-size:10px;font-weight:700;white-space:nowrap;transition:background .16s,border-color .16s,transform .16s}
+.top-avatar:hover{background:#edf4ff;border-color:#c7daf5}
+.top-avatar:active{transform:scale(.97)}
+.top-avatar-initials{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;flex:none;background:#e1edff;color:#3167b0;font-size:9px;font-weight:800}
+.top-avatar-label{display:inline-block}
+@media(max-width:600px){.top-avatar{padding:4px 8px 4px 4px;gap:5px}.top-avatar-label{font-size:9px}.top-install{padding:7px 8px;font-size:8px}}

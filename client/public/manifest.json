@@ -1,24 +1,24 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "ZAVEN Smart Inventory",
   "short_name": "ZAVEN",
   "description": "Kelola stok, barang, kategori, dan supplier dengan mudah.",
   "lang": "id-ID",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#f6f8fc",
   "theme_color": "#102348",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon.png",
+      "src": "./icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
