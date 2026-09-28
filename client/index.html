@@ -4,20 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#102348" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="ZAVEN" />
-    <meta name="description" content="ZAVEN Smart Inventory — kelola barang, stok, kategori, dan supplier dalam satu tempat." />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="icon" type="image/png" sizes="192x192 512x512" href="./icon.png" />
-    <link rel="apple-touch-icon" sizes="192x192 512x512" href="./icon.png" />
+    <title>ZAVEN — Smart Inventory</title>
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <title>ZAVEN — Smart Inventory</title>
+
+    <!-- Style khusus untuk menyembunyikan tombol demo & install tanpa merusak layout -->
+    <style>
+      .demo-button,
+      .install-app-button,
+      .login-divider,
+      .login-setup,
+      .login-legal {
+        display: none !important;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
+
+    <script>
+      // Konfigurasi Kredensial Supabase
+      const supaConfig = {
+        url: 'https://aknwaplmsrcnlrrfbpdo.supabase.co',
+        key: 'sb_publishable_uhrdYcA5mlQ34ERUApRMjQ_JMNALmzA',
+        productsTable: 'items',
+        categoriesTable: '',
+        suppliersTable: ''
+      };
+
+      localStorage.setItem('zaven-supabase-config-v1', JSON.stringify(supaConfig));
+      localStorage.setItem('supabaseUrl', supaConfig.url);
+      localStorage.setItem('supabaseKey', supaConfig.key);
+    </script>
+
+    <!-- Script Utama -->
     <script defer src="./app.js"></script>
   </body>
 </html>
